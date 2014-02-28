@@ -60,6 +60,7 @@ public class ZapposChallenge {
 	         return true;  
 	      } catch(NumberFormatException nfe)  
 	      {  
+	    	  System.out.println("please enter a valid integer value");
 	          return false;  
 	      }  
 	}
@@ -71,6 +72,7 @@ public class ZapposChallenge {
 	         return true;  
 	      } catch(NumberFormatException nfe)  
 	      {  
+	    	  System.out.println("Please enter a valid price");
 	          return false;  
 	      }  
 	}
@@ -95,6 +97,8 @@ public class ZapposChallenge {
 		cost = Float.parseFloat(myInput1);
 		br.close();
 		
+		if(no_of_items!=0)
+		{		
 		Individual_Cost= cost/no_of_items;
 		
 		
@@ -126,7 +130,12 @@ public class ZapposChallenge {
 		System.out.println(Price);
 		http.printitems(productName, Price, no_of_items);
  
+		}
+		else{
+		System.out.println("Please try again using a valid no. of items and price");
+		}
 	}
+		
  
 	// HTTP GET request
 	private void sendGet(ArrayList<String> pName, ArrayList<Float> pPrice, String url,float cost) throws Exception {
