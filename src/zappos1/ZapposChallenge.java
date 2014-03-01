@@ -7,20 +7,8 @@ import java.net.URL;
 import java.util.*;
 import javax.net.ssl.HttpsURLConnection;
 
-class Products {
 
-public String name;
-public String price;
-//	
-//public void Products(String n, int p) {
-//	name = n;
-//	price = p;
-//}
-	
-}
  
- 
-
 public class ZapposChallenge {
  
 	private final String USER_AGENT = "Mozilla/5.0";
@@ -126,10 +114,10 @@ public class ZapposChallenge {
 		urls.add("http://api.zappos.com/Search?term=jewelry&key=a73121520492f88dc3d33daf2103d7574f1a3166");
 		urls.add("http://api.zappos.com/Search?term=men&key=a73121520492f88dc3d33daf2103d7574f1a3166");
 		urls.add("http://api.zappos.com/Search?term=eyewear&key=a73121520492f88dc3d33daf2103d7574f1a3166");
-		//urls.add("http://api.zappos.com/Search?term=women&key=a73121520492f88dc3d33daf2103d7574f1a3166");
-		//urls.add("http://api.zappos.com/Search?term=kids&key=a73121520492f88dc3d33daf2103d7574f1a3166");
-		//urls.add("http://api.zappos.com/Search?term=accessories&key=a73121520492f88dc3d33daf2103d7574f1a3166");
-		//urls.add("http://api.zappos.com/Search?term=new%20arrivals&key=a73121520492f88dc3d33daf2103d7574f1a3166");
+		urls.add("http://api.zappos.com/Search?term=women&key=a73121520492f88dc3d33daf2103d7574f1a3166");
+		urls.add("http://api.zappos.com/Search?term=kids&key=a73121520492f88dc3d33daf2103d7574f1a3166");
+		urls.add("http://api.zappos.com/Search?term=accessories&key=a73121520492f88dc3d33daf2103d7574f1a3166");
+		urls.add("http://api.zappos.com/Search?term=new%20arrivals&key=a73121520492f88dc3d33daf2103d7574f1a3166");
 
 		
 		System.out.println("Testing 1 - Send Http GET request");
@@ -185,7 +173,7 @@ public class ZapposChallenge {
 	
 		JSONObject obj1 = new JSONObject(response.toString());
 		JSONArray n = obj1.getJSONArray("results");
-		Products []p = new Products[n.length()];
+		
 		
 		int i = 0;
 		String prName;
