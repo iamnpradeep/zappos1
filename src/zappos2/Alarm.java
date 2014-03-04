@@ -27,11 +27,9 @@ public class Alarm {
     }
 
     class AlarmTask extends TimerTask {
-        /**
-         * Called on a background thread by Timer
-         */
+        
         public void run(){
-            // Do your work here; it's 10:30 AM!
+            
         	
         	ZapposChallenge2 obj = new ZapposChallenge2();
         	try {
@@ -41,9 +39,7 @@ public class Alarm {
 				e.printStackTrace();
 			}
 
-            // If you don't want the alarm to go off again
-            // tomorrow (etc), cancel the timer
-            //timer.cancel();
+            
         	
         }
     }
