@@ -10,12 +10,15 @@ public class Alarm {
 	Timer _timer;
 
     public Alarm() {
-
-        // Create a Date corresponding to 10:30:00 AM today.
         Calendar calendar = Calendar.getInstance();
-        calendar.set(Calendar.HOUR_OF_DAY, 10);
-        calendar.set(Calendar.MINUTE, 30);
+        calendar.set(Calendar.HOUR_OF_DAY, 8);
+        calendar.set(Calendar.MINUTE, 00);
         calendar.set(Calendar.SECOND, 0);
+        System.out.println("Saved items price will be checked everyday at 8:00 am");
+        System.out.println();
+        System.out.println("Notification to your email will be sent when saved items price drop by 20 percent of original price.");
+        System.out.println();
+        System.out.println("Thank you..!!");
 
         Date alarmTime = calendar.getTime();
 
